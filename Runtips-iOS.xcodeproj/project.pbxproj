@@ -8,22 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489BF2479D8B900B2D831 /* AppDelegate.swift */; };
-		8C9489C22479D8B900B2D831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489C12479D8B900B2D831 /* SceneDelegate.swift */; };
-		8C9489C42479D8B900B2D831 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489C32479D8B900B2D831 /* ViewController.swift */; };
-		8C9489C72479D8B900B2D831 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489C52479D8B900B2D831 /* Main.storyboard */; };
 		8C9489C92479D8BB00B2D831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489C82479D8BB00B2D831 /* Assets.xcassets */; };
 		8C9489CC2479D8BB00B2D831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489CA2479D8BB00B2D831 /* LaunchScreen.storyboard */; };
+		8C9489D42479DA9600B2D831 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489D32479DA9600B2D831 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C9489BC2479D8B900B2D831 /* Runtips-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Runtips-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9489BF2479D8B900B2D831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C9489C12479D8B900B2D831 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C9489C32479D8B900B2D831 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C9489C62479D8B900B2D831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C9489C82479D8BB00B2D831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C9489CB2479D8BB00B2D831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C9489CD2479D8BB00B2D831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9489D32479DA9600B2D831 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +36,7 @@
 		8C9489B32479D8B900B2D831 = {
 			isa = PBXGroup;
 			children = (
+				8C9489D32479DA9600B2D831 /* README.md */,
 				8C9489BE2479D8B900B2D831 /* Runtips-iOS */,
 				8C9489BD2479D8B900B2D831 /* Products */,
 			);
@@ -57,9 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				8C9489BF2479D8B900B2D831 /* AppDelegate.swift */,
-				8C9489C12479D8B900B2D831 /* SceneDelegate.swift */,
-				8C9489C32479D8B900B2D831 /* ViewController.swift */,
-				8C9489C52479D8B900B2D831 /* Main.storyboard */,
 				8C9489C82479D8BB00B2D831 /* Assets.xcassets */,
 				8C9489CA2479D8BB00B2D831 /* LaunchScreen.storyboard */,
 				8C9489CD2479D8BB00B2D831 /* Info.plist */,
@@ -127,7 +121,7 @@
 			files = (
 				8C9489CC2479D8BB00B2D831 /* LaunchScreen.storyboard in Resources */,
 				8C9489C92479D8BB00B2D831 /* Assets.xcassets in Resources */,
-				8C9489C72479D8B900B2D831 /* Main.storyboard in Resources */,
+				8C9489D42479DA9600B2D831 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +132,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C9489C42479D8B900B2D831 /* ViewController.swift in Sources */,
 				8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */,
-				8C9489C22479D8B900B2D831 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C9489C52479D8B900B2D831 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C9489C62479D8B900B2D831 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C9489CA2479D8BB00B2D831 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +200,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,14 +271,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K58JH44H3K;
 				INFOPLIST_FILE = "Runtips-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.runtips.Runtips-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo.runtips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,14 +290,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K58JH44H3K;
 				INFOPLIST_FILE = "Runtips-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.runtips.Runtips-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo.runtips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
