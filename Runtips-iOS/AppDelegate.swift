@@ -13,8 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let start = LoginRouter.createLogin()
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [start]
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = start
+        window?.makeKeyAndVisible()
         return true
     }
 }
-

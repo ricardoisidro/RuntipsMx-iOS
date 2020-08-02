@@ -5,3 +5,5 @@
 **What the project does?**
 
 A running app using VIPER architecture
+
+Based on: https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29

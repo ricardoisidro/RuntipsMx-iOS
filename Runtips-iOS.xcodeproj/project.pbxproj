@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29A41A24D52CFE0004C08F /* GradientView.swift */; };
 		8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489BF2479D8B900B2D831 /* AppDelegate.swift */; };
 		8C9489C92479D8BB00B2D831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489C82479D8BB00B2D831 /* Assets.xcassets */; };
 		8C9489CC2479D8BB00B2D831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489CA2479D8BB00B2D831 /* LaunchScreen.storyboard */; };
 		8C9489D42479DA9600B2D831 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489D32479DA9600B2D831 /* README.md */; };
+		8C9489DC247A3E5900B2D831 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489DA247A3E5900B2D831 /* LoginViewController.swift */; };
+		8C9489E0247A418700B2D831 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489DF247A418700B2D831 /* LoginRouter.swift */; };
+		8C9489E3247A41DB00B2D831 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489E2247A41DB00B2D831 /* LoginProtocol.swift */; };
+		8CCF45842484C6D3009ADE44 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF45832484C6D3009ADE44 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C29A41A24D52CFE0004C08F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8C9489BC2479D8B900B2D831 /* Runtips-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Runtips-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9489BF2479D8B900B2D831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C9489C82479D8BB00B2D831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C9489CB2479D8BB00B2D831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C9489CD2479D8BB00B2D831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C9489D32479DA9600B2D831 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C9489DA247A3E5900B2D831 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8C9489DF247A418700B2D831 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		8C9489E2247A41DB00B2D831 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		8CCF45832484C6D3009ADE44 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C29A41824D52CB50004C08F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8C29A41924D52CC10004C08F /* Views */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C29A41924D52CC10004C08F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C29A41A24D52CFE0004C08F /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8C9489B32479D8B900B2D831 = {
 			isa = PBXGroup;
 			children = (
@@ -53,12 +79,57 @@
 		8C9489BE2479D8B900B2D831 /* Runtips-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8C29A41824D52CB50004C08F /* Utils */,
+				8C9489D6247A3A3A00B2D831 /* Login */,
 				8C9489BF2479D8B900B2D831 /* AppDelegate.swift */,
 				8C9489C82479D8BB00B2D831 /* Assets.xcassets */,
 				8C9489CA2479D8BB00B2D831 /* LaunchScreen.storyboard */,
 				8C9489CD2479D8BB00B2D831 /* Info.plist */,
 			);
 			path = "Runtips-iOS";
+			sourceTree = "<group>";
+		};
+		8C9489D6247A3A3A00B2D831 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF45822484C6A1009ADE44 /* Presenter */,
+				8C9489E1247A41C000B2D831 /* Protocols */,
+				8C9489DE247A415C00B2D831 /* Router */,
+				8C9489D7247A3A4800B2D831 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8C9489D7247A3A4800B2D831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C9489DA247A3E5900B2D831 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C9489DE247A415C00B2D831 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8C9489DF247A418700B2D831 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8C9489E1247A41C000B2D831 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C9489E2247A41DB00B2D831 /* LoginProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8CCF45822484C6A1009ADE44 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF45832484C6D3009ADE44 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +142,7 @@
 				8C9489B82479D8B900B2D831 /* Sources */,
 				8C9489B92479D8B900B2D831 /* Frameworks */,
 				8C9489BA2479D8B900B2D831 /* Resources */,
+				8C9489D52479FE9D00B2D831 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -127,12 +199,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8C9489D52479FE9D00B2D831 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C9489B82479D8B900B2D831 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9489DC247A3E5900B2D831 /* LoginViewController.swift in Sources */,
+				8C9489E3247A41DB00B2D831 /* LoginProtocol.swift in Sources */,
+				8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */,
 				8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */,
+				8C9489E0247A418700B2D831 /* LoginRouter.swift in Sources */,
+				8CCF45842484C6D3009ADE44 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
