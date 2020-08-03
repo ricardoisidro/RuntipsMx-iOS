@@ -9,13 +9,31 @@
 import Foundation
 import UIKit
 
+// Responsable for get the data from View user actions to Interactor,
+// and send data obtained from Interactor to the View. Asks the
+// router/wireframe for navigation.
+
 class LoginPresenter: ViewToPresenterProtocol {
 
     var interactor: PresenterToInteractorProtocol?
     var view: PresenterToViewProtocol?
     var router: PresenterToRouterProtocol?
 
-    func startFetchingCredentials(user: String, pass: String) {
-        interactor?.fetchLogin()
+    func startFetchingCredentials(with user: String, and pass: String) {
+        interactor?.fetchLogin(with: user, and: pass)
+    }
+
+    func showHomeController(navigationController: UINavigationController, name: String?) {
+        router?.pushToHomeScreen(navigationController: navigationController, name: name)
+    }
+}
+
+extension LoginPresenter: InteractorToPresenterProtocol {
+    func loginFetchedSuccess(with name: String) {
+        view?.showHome(name: name)
+    }
+
+    func loginFetchedFailed(error: Error?) {
+        view?.showError()
     }
 }

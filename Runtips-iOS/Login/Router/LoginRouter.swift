@@ -9,16 +9,28 @@
 import Foundation
 import UIKit
 
+// All navigation logic here, describing which screens are to be shown here.
+
 class LoginRouter: PresenterToRouterProtocol {
 
     static func createLogin() -> UIViewController {
-        return loginViewController
+        let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter()
+        let interactor: PresenterToInteractorProtocol = LoginInteractor()
+        let router: PresenterToRouterProtocol = LoginRouter()
+
+        viewController.presenter = presenter
+        presenter.view = viewController
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+
+        return viewController
     }
 
-    func pushToHomeScreen(navigationController: UINavigationController) {
-    }
-
-    static var loginViewController: UIViewController {
-        return LoginViewController()
+    func pushToHomeScreen(navigationController: UINavigationController, name: String?) {
+        let homeModule = HomeRouter.createHome(name: name)
+        navigationController.pushViewController(homeModule, animated: true)
     }
 }
