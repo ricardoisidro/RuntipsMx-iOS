@@ -14,12 +14,12 @@ protocol ViewToPresenterProtocol: class {
     var interactor: PresenterToInteractorProtocol? { get set }
     var view: PresenterToViewProtocol? { get set }
     func startFetchingCredentials(with user: String, and pass: String)
-    func showHomeController(navigationController: UINavigationController, name: String?)
+    func showHomeController(name: String?)
 }
 
 protocol PresenterToRouterProtocol: class {
-    static func createLogin() -> UIViewController
-    func pushToHomeScreen(navigationController: UINavigationController, name: String?)
+    static func createLogin(usingNavigationFactory navigation: NavigationFactory) -> UINavigationController
+    func pushToHomeScreen(name: String?)
 }
 
 protocol PresenterToInteractorProtocol: class {

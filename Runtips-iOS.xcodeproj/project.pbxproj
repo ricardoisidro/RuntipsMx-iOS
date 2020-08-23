@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29A41A24D52CFE0004C08F /* GradientView.swift */; };
+		8C5A178A24F0CA3600B27EFD /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A178924F0CA3600B27EFD /* NavigationBuilder.swift */; };
 		8C8226C624D67E87003DE6D8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8226C524D67E87003DE6D8 /* LoginViewController.xib */; };
 		8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489BF2479D8B900B2D831 /* AppDelegate.swift */; };
 		8C9489C92479D8BB00B2D831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9489C82479D8BB00B2D831 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		8C29A41A24D52CFE0004C08F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		8C5A178924F0CA3600B27EFD /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		8C8226C524D67E87003DE6D8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		8C9489BC2479D8B900B2D831 /* Runtips-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Runtips-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9489BF2479D8B900B2D831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				8C9489DA247A3E5900B2D831 /* LoginViewController.swift */,
 				8C8226C524D67E87003DE6D8 /* LoginViewController.xib */,
+				8C5A178924F0CA3600B27EFD /* NavigationBuilder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				8C9489DC247A3E5900B2D831 /* LoginViewController.swift in Sources */,
 				8C9489E3247A41DB00B2D831 /* LoginProtocol.swift in Sources */,
 				8CC7186424D7BA09006FA1D3 /* LoginInteractor.swift in Sources */,
+				8C5A178A24F0CA3600B27EFD /* NavigationBuilder.swift in Sources */,
 				8CC7186A24D7BDA5006FA1D3 /* HomeViewController.swift in Sources */,
 				8CC7187124D7C566006FA1D3 /* HomeProtocol.swift in Sources */,
 				8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */,

@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        //navigationController?.isNavigationBarHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -77,8 +77,9 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: PresenterToViewProtocol {
     func showHome(name: String) {
-        guard let navController = navigationController else { return }
-        presenter?.showHomeController(navigationController: navController, name: name)
+        //mover validacion a router
+        //guard let navController = navigationController else { return }
+        presenter?.showHomeController(name: name)
     }
 
     func showError() {

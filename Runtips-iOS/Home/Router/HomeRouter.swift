@@ -11,9 +11,9 @@ import UIKit
 
 class HomeRouter: PresenterToRouterHomeProtocol {
 
-    static func createHome(name: String?) -> UIViewController {
+    static func createHome(usingNavigationFactory navigation: NavigationFactory, name: String?) -> UINavigationController {
         let viewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         viewController.name = name
-        return viewController
+        return navigation(viewController)
     }
 }

@@ -16,7 +16,10 @@ class LoginInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
 
     func fetchLogin(with user: String, and pass: String) {
+        //Añadir mas regasl de negocio, utilizando un enum
+        // ej. si son 8 caracteres, brincar al siguiente campo
         if user == "user" && pass == "pass" {
+            //presenter?.startLoader()
             presenter?.loginFetchedSuccess(with: "Ricardo")
         } else {
             presenter?.loginFetchedFailed(error: nil)

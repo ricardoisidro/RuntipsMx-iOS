@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol PresenterToRouterHomeProtocol: class {
-    static func createHome(name: String?) -> UIViewController
+    static func createHome(usingNavigationFactory navigation: NavigationFactory, name: String?) -> UINavigationController
 }

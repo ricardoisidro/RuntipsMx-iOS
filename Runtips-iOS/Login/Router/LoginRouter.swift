@@ -13,7 +13,7 @@ import UIKit
 
 class LoginRouter: PresenterToRouterProtocol {
 
-    static func createLogin() -> UIViewController {
+    static func createLogin(usingNavigationFactory navigation: NavigationFactory) -> UINavigationController {
         let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
 
         let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter()
@@ -26,11 +26,12 @@ class LoginRouter: PresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
 
-        return viewController
+        return navigation(viewController)
     }
 
-    func pushToHomeScreen(navigationController: UINavigationController, name: String?) {
-        let homeModule = HomeRouter.createHome(name: name)
-        navigationController.pushViewController(homeModule, animated: true)
+    func pushToHomeScreen(name: String?) {
+        let homeModule = HomeRouter.createHome(usingNavigationFactory: NavigationBuilder.build, name: name)
+//        navigator?.pushViewController(homeModule, animated: true)
+//        navigationController?.pushViewController(homeModule, animated: true)
     }
 }

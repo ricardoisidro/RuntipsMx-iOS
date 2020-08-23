@@ -23,8 +23,10 @@ class LoginPresenter: ViewToPresenterProtocol {
         interactor?.fetchLogin(with: user, and: pass)
     }
 
-    func showHomeController(navigationController: UINavigationController, name: String?) {
-        router?.pushToHomeScreen(navigationController: navigationController, name: name)
+    // Remove extra navController
+    func showHomeController(name: String?) {
+        //guard let navVC = UIView.navigationController
+        router?.pushToHomeScreen(name: name)
     }
 }
 
@@ -34,6 +36,7 @@ extension LoginPresenter: InteractorToPresenterProtocol {
     }
 
     func loginFetchedFailed(error: Error?) {
+        //evaluar error y regresar mensaje de texto a la vista
         view?.showError()
     }
 }
