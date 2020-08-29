@@ -16,7 +16,7 @@ class LoginRouter: PresenterToRouterProtocol {
     static func createLogin() -> UIViewController {
         let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
 
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter()
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter(name: "Ricardo")
         let interactor: PresenterToInteractorProtocol = LoginInteractor()
         let router: PresenterToRouterProtocol = LoginRouter()
 
@@ -29,8 +29,9 @@ class LoginRouter: PresenterToRouterProtocol {
         return viewController
     }
 
-    func pushToHomeScreen(navigationController: UINavigationController, name: String?) {
+    func pushToHomeScreen(controller: UIViewController, name: String?) {
         let homeModule = HomeRouter.createHome(name: name)
-        navigationController.pushViewController(homeModule, animated: true)
+        guard let navigation = controller.navigationController else { return }
+        navigation.pushViewController(homeModule, animated: true)
     }
 }

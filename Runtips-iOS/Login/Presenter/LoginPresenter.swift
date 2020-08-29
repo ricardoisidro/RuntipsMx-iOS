@@ -18,22 +18,41 @@ class LoginPresenter: ViewToPresenterProtocol {
     var interactor: PresenterToInteractorProtocol?
     var view: PresenterToViewProtocol?
     var router: PresenterToRouterProtocol?
+    var name: String?
+    var isNavHidden = true
+
+    init(name: String) {
+        self.name = name
+    }
 
     func startFetchingCredentials(with user: String, and pass: String) {
         interactor?.fetchLogin(with: user, and: pass)
     }
 
-    func showHomeController(navigationController: UINavigationController, name: String?) {
-        router?.pushToHomeScreen(navigationController: navigationController, name: name)
+    func showHomeController(name: String?) {
+        guard let myView = view as? UIViewController else { return }
+        router?.pushToHomeScreen(controller: myView, name: name)
+    }
+
+    func viewDidLoad() {
+        interactor?.isNameAuthorized(name: name)
     }
 }
 
 extension LoginPresenter: InteractorToPresenterProtocol {
+    func nameValidationSuccess(name: String) {
+        view?.showName(name: name)
+    }
+
     func loginFetchedSuccess(with name: String) {
         view?.showHome(name: name)
     }
 
     func loginFetchedFailed(error: Error?) {
         view?.showError()
+    }
+
+    func nameValidationFailed() {
+        view?.showValidationAlert()
     }
 }

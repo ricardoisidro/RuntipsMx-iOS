@@ -13,26 +13,33 @@ protocol ViewToPresenterProtocol: class {
     var router: PresenterToRouterProtocol? { get set }
     var interactor: PresenterToInteractorProtocol? { get set }
     var view: PresenterToViewProtocol? { get set }
+    var isNavHidden: Bool { get set }
+    func viewDidLoad()
     func startFetchingCredentials(with user: String, and pass: String)
-    func showHomeController(navigationController: UINavigationController, name: String?)
+    func showHomeController(name: String?)
 }
 
 protocol PresenterToRouterProtocol: class {
     static func createLogin() -> UIViewController
-    func pushToHomeScreen(navigationController: UINavigationController, name: String?)
+    func pushToHomeScreen(controller: UIViewController, name: String?)
 }
 
 protocol PresenterToInteractorProtocol: class {
     var presenter: InteractorToPresenterProtocol? { get set }
     func fetchLogin(with user: String, and pass: String)
+    func isNameAuthorized(name: String?)
 }
 
 protocol InteractorToPresenterProtocol: class {
     func loginFetchedSuccess(with name: String)
     func loginFetchedFailed(error: Error?)
+    func nameValidationSuccess(name: String)
+    func nameValidationFailed()
 }
 
 protocol PresenterToViewProtocol: class {
     func showHome(name: String)
     func showError()
+    func showName(name: String)
+    func showValidationAlert()
 }

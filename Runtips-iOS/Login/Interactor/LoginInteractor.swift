@@ -13,13 +13,23 @@ import Foundation
 
 class LoginInteractor: PresenterToInteractorProtocol {
 
+    let authorizedNames: [String] = ["user", "Ricardo"]
     var presenter: InteractorToPresenterProtocol?
 
     func fetchLogin(with user: String, and pass: String) {
         if user == "user" && pass == "pass" {
-            presenter?.loginFetchedSuccess(with: "Ricardo")
+            presenter?.loginFetchedSuccess(with: "Welcome!")
         } else {
             presenter?.loginFetchedFailed(error: nil)
+        }
+    }
+
+    func isNameAuthorized(name: String?) {
+        guard let receivedName = name else { return }
+        if authorizedNames.contains(receivedName) {
+            presenter?.nameValidationSuccess(name: receivedName)
+        } else {
+            presenter?.nameValidationFailed()
         }
     }
 }

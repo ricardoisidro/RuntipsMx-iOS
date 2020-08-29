@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         hideMessage()
         userTextField.delegate = self
@@ -28,9 +29,10 @@ class LoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = (presenter?.isNavHidden ?? false)
     }
 
+    //Es preferible que el presenter del Home determine si se mostrará el nav
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
@@ -76,9 +78,15 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 extension LoginViewController: PresenterToViewProtocol {
+    func showValidationAlert() {
+        let alert = UIAlertController(title: "Restricción", message: "Usuario no autorizado", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+
     func showHome(name: String) {
-        guard let navController = navigationController else { return }
-        presenter?.showHomeController(navigationController: navController, name: name)
+        presenter?.showHomeController(name: name)
     }
 
     func showError() {
@@ -88,5 +96,9 @@ extension LoginViewController: PresenterToViewProtocol {
             self?.loginMessage.text = "Usuario o contraseña incorrecto"
             self?.loginMessage.alpha = 1.0
         })
+    }
+
+    func showName(name: String) {
+        print("Llegó \(name)")
     }
 }
