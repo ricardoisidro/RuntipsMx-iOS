@@ -37,6 +37,10 @@ class LoginPresenter: ViewToPresenterProtocol {
     func viewDidLoad() {
         interactor?.isNameAuthorized(name: name)
     }
+
+    func showRegisterController() {
+        router?.goToRegisterScreen()
+    }
 }
 
 extension LoginPresenter: InteractorToPresenterProtocol {

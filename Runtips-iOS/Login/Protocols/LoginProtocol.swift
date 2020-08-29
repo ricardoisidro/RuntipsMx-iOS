@@ -17,11 +17,15 @@ protocol ViewToPresenterProtocol: class {
     func viewDidLoad()
     func startFetchingCredentials(with user: String, and pass: String)
     func showHomeController(name: String?)
+    func showRegisterController()
 }
 
 protocol PresenterToRouterProtocol: class {
     static func createLogin() -> UIViewController
+    //push desde el mismo navegador
     func pushToHomeScreen(controller: UIViewController, name: String?)
+    //nuevo navegador
+    func goToRegisterScreen()
 }
 
 protocol PresenterToInteractorProtocol: class {

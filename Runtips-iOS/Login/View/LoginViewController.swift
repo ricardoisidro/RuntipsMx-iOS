@@ -43,6 +43,10 @@ class LoginViewController: UIViewController {
             let pwds = passwordTextField.text else { return }
         presenter?.startFetchingCredentials(with: user, and: pwds)
     }
+
+    @IBAction func registerTapped(_ sender: UIButton) {
+        presenter?.showRegisterController()
+    }
 }
 
 private extension LoginViewController {

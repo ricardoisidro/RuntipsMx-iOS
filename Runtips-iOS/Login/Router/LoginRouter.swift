@@ -34,4 +34,10 @@ class LoginRouter: PresenterToRouterProtocol {
         guard let navigation = controller.navigationController else { return }
         navigation.pushViewController(homeModule, animated: true)
     }
+
+    func goToRegisterScreen() {
+        let registerModule = RegisterRouter.createRegister()
+        guard let window = UIApplication.shared.keyWindow else { return }
+        window.rootViewController = registerModule
+    }
 }

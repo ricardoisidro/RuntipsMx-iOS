@@ -33,7 +33,7 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eQO-qf-ipV">
-                                    <rect key="frame" x="0.0" y="225" width="290" height="199"/>
+                                    <rect key="frame" x="0.0" y="225" width="290" height="100"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ei0-BZ-cCw">
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
@@ -52,7 +52,7 @@
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información sobre la contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-EK-CU5">
-                                            <rect key="frame" x="0.0" y="100" width="290" height="99"/>
+                                            <rect key="frame" x="0.0" y="100" width="290" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOa-h4-FHO">
-                                    <rect key="frame" x="0.0" y="504" width="290" height="34"/>
+                                    <rect key="frame" x="0.0" y="405" width="290" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="V04-ee-t4Z"/>
                                     </constraints>
@@ -69,6 +69,15 @@
                                     </state>
                                     <connections>
                                         <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="7L2-Lv-dgZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTf-Su-ecq">
+                                    <rect key="frame" x="0.0" y="519" width="290" height="19"/>
+                                    <state key="normal" title="Registrar">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="registerTapped:" destination="-1" eventType="touchUpInside" id="5Nz-Dc-KYK"/>
                                     </connections>
                                 </button>
                             </subviews>
