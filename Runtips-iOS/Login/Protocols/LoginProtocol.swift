@@ -31,7 +31,7 @@ protocol PresenterToRouterProtocol: class {
 protocol PresenterToInteractorProtocol: class {
     var presenter: InteractorToPresenterProtocol? { get set }
     func fetchLogin(with user: String, and pass: String)
-    func isNameAuthorized(name: String?)
+    func isNameAuthorized(name: String?) -> Bool
 }
 
 protocol InteractorToPresenterProtocol: class {

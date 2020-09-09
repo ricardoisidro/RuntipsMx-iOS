@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C00B32924FCB87C0074BE21 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C00B32824FCB87C0074BE21 /* RegisterPresenter.swift */; };
 		8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29A41A24D52CFE0004C08F /* GradientView.swift */; };
 		8C53E88B24F9DE59000064E7 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53E88A24F9DE59000064E7 /* RegisterProtocol.swift */; };
 		8C53E88F24F9DF2E000064E7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53E88D24F9DF2E000064E7 /* RegisterViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C00B32824FCB87C0074BE21 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		8C29A41A24D52CFE0004C08F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8C53E88A24F9DE59000064E7 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		8C53E88D24F9DF2E000064E7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C00B32724FCB8610074BE21 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C00B32824FCB87C0074BE21 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		8C29A41824D52CB50004C08F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		8C53E88824F9DDD4000064E7 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				8C00B32724FCB8610074BE21 /* Presenter */,
 				8C53E89124F9E302000064E7 /* Router */,
 				8C53E88C24F9DF12000064E7 /* View */,
 				8C53E88924F9DDE5000064E7 /* Protocols */,
@@ -339,6 +350,7 @@
 				8CC7187124D7C566006FA1D3 /* HomeProtocol.swift in Sources */,
 				8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */,
 				8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */,
+				8C00B32924FCB87C0074BE21 /* RegisterPresenter.swift in Sources */,
 				8C9489E0247A418700B2D831 /* LoginRouter.swift in Sources */,
 				8CC7186E24D7C54B006FA1D3 /* HomeRouter.swift in Sources */,
 				8C53E89324F9E314000064E7 /* RegisterRouter.swift in Sources */,

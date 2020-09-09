@@ -16,7 +16,7 @@ class LoginRouter: PresenterToRouterProtocol {
     static func createLogin() -> UIViewController {
         let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
 
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter(name: "Ricardo")
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = LoginPresenter(name: "rich")
         let interactor: PresenterToInteractorProtocol = LoginInteractor()
         let router: PresenterToRouterProtocol = LoginRouter()
 

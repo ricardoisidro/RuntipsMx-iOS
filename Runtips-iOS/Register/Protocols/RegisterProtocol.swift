@@ -8,6 +8,22 @@
 
 import UIKit
 
+protocol RegisterViewToPresenterProtocol: AnyObject {
+    var router: RegisterPresenterToRouterProtocol? { get set }
+    var interactor: RegisterPresenterToInteractorProtocol? { get set }
+    func showLoginController()
+    func showStepTwoController()
+}
+
 protocol RegisterPresenterToRouterProtocol: AnyObject {
     static func createRegister() -> UINavigationController
+    func backToLogin()
+    func goToStepTwo()
 }
+
+protocol RegisterPresenterToInteractorProtocol: AnyObject {
+    var presenter: RegisterInteractorToPresenterProtocol? { get set }
+    func validateForm()
+}
+
+protocol RegisterInteractorToPresenterProtocol: AnyObject { }

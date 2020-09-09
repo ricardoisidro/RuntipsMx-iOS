@@ -35,7 +35,7 @@ class LoginPresenter: ViewToPresenterProtocol {
     }
 
     func viewDidLoad() {
-        interactor?.isNameAuthorized(name: name)
+        _ = interactor?.isNameAuthorized(name: name)
     }
 
     func showRegisterController() {
