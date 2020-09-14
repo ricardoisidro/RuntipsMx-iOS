@@ -13,11 +13,16 @@ class RegisterRouter: RegisterPresenterToRouterProtocol {
     static func createRegister() -> UINavigationController {
         let viewController = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
 
-        let presenter: RegisterViewToPresenterProtocol = RegisterPresenter()
+        let presenter: RegisterViewToPresenterProtocol & RegisterInteractorToPresenterProtocol = RegisterPresenter()
         let router: RegisterPresenterToRouterProtocol = RegisterRouter()
+        let interactor: RegisterPresenterToInteractorProtocol = RegisterInteractor()
 
         viewController.presenter = presenter
         presenter.router = router
+        presenter.interactor = interactor
+        presenter.view = viewController
+        interactor.presenter = presenter
+
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.backgroundColor = UIColor.magenta
         navigationController.navigationBar.prefersLargeTitles = true
@@ -31,4 +36,9 @@ class RegisterRouter: RegisterPresenterToRouterProtocol {
     }
 
     func goToStepTwo() { }
+
+    func goToHomeScreen() {
+//        let homeModule = HomeRouter.createHome(name: "Registered!")
+//        guard let
+    }
 }

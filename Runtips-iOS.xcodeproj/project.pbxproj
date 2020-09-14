@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8C00B32924FCB87C0074BE21 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C00B32824FCB87C0074BE21 /* RegisterPresenter.swift */; };
+		8C28BDB5250C79C1008C0558 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C28BDB4250C79C1008C0558 /* RegisterInteractor.swift */; };
+		8C28BDB8250C7BF7008C0558 /* RegisterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C28BDB7250C7BF7008C0558 /* RegisterEntity.swift */; };
 		8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29A41A24D52CFE0004C08F /* GradientView.swift */; };
 		8C53E88B24F9DE59000064E7 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53E88A24F9DE59000064E7 /* RegisterProtocol.swift */; };
 		8C53E88F24F9DF2E000064E7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53E88D24F9DF2E000064E7 /* RegisterViewController.swift */; };
@@ -21,6 +23,7 @@
 		8C9489DC247A3E5900B2D831 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489DA247A3E5900B2D831 /* LoginViewController.swift */; };
 		8C9489E0247A418700B2D831 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489DF247A418700B2D831 /* LoginRouter.swift */; };
 		8C9489E3247A41DB00B2D831 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9489E2247A41DB00B2D831 /* LoginProtocol.swift */; };
+		8CAF9E0D250F26CE00818F71 /* RegularExpresions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9E0C250F26CE00818F71 /* RegularExpresions.swift */; };
 		8CC7186424D7BA09006FA1D3 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7186324D7BA08006FA1D3 /* LoginInteractor.swift */; };
 		8CC7186A24D7BDA5006FA1D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7186824D7BDA5006FA1D3 /* HomeViewController.swift */; };
 		8CC7186B24D7BDA5006FA1D3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC7186924D7BDA5006FA1D3 /* HomeViewController.xib */; };
@@ -31,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		8C00B32824FCB87C0074BE21 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		8C28BDB4250C79C1008C0558 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		8C28BDB7250C7BF7008C0558 /* RegisterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntity.swift; sourceTree = "<group>"; };
 		8C29A41A24D52CFE0004C08F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8C53E88A24F9DE59000064E7 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		8C53E88D24F9DF2E000064E7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		8C9489DA247A3E5900B2D831 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C9489DF247A418700B2D831 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		8C9489E2247A41DB00B2D831 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		8CAF9E0C250F26CE00818F71 /* RegularExpresions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpresions.swift; sourceTree = "<group>"; };
 		8CC7186324D7BA08006FA1D3 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		8CC7186824D7BDA5006FA1D3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8CC7186924D7BDA5006FA1D3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -73,10 +79,27 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8C28BDB3250C79A7008C0558 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8C28BDB4250C79C1008C0558 /* RegisterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8C28BDB6250C7BE2008C0558 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8C28BDB7250C7BF7008C0558 /* RegisterEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		8C29A41824D52CB50004C08F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				8C29A41924D52CC10004C08F /* Views */,
+				8CAF9E0C250F26CE00818F71 /* RegularExpresions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -92,6 +115,8 @@
 		8C53E88824F9DDD4000064E7 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				8C28BDB6250C7BE2008C0558 /* Entity */,
+				8C28BDB3250C79A7008C0558 /* Interactor */,
 				8C00B32724FCB8610074BE21 /* Presenter */,
 				8C53E89124F9E302000064E7 /* Router */,
 				8C53E88C24F9DF12000064E7 /* View */,
@@ -341,12 +366,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAF9E0D250F26CE00818F71 /* RegularExpresions.swift in Sources */,
 				8C9489DC247A3E5900B2D831 /* LoginViewController.swift in Sources */,
+				8C28BDB8250C7BF7008C0558 /* RegisterEntity.swift in Sources */,
 				8C9489E3247A41DB00B2D831 /* LoginProtocol.swift in Sources */,
 				8C53E88B24F9DE59000064E7 /* RegisterProtocol.swift in Sources */,
 				8C53E88F24F9DF2E000064E7 /* RegisterViewController.swift in Sources */,
 				8CC7186424D7BA09006FA1D3 /* LoginInteractor.swift in Sources */,
 				8CC7186A24D7BDA5006FA1D3 /* HomeViewController.swift in Sources */,
+				8C28BDB5250C79C1008C0558 /* RegisterInteractor.swift in Sources */,
 				8CC7187124D7C566006FA1D3 /* HomeProtocol.swift in Sources */,
 				8C29A41B24D52CFE0004C08F /* GradientView.swift in Sources */,
 				8C9489C02479D8B900B2D831 /* AppDelegate.swift in Sources */,

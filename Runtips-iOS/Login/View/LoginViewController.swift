@@ -102,7 +102,7 @@ extension LoginViewController: PresenterToViewProtocol {
         })
     }
 
-    func showName(name: String) {
+    func printNameOnConsole(name: String) {
         print("Llegó \(name)")
     }
 }

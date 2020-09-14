@@ -44,6 +44,6 @@ protocol InteractorToPresenterProtocol: class {
 protocol PresenterToViewProtocol: class {
     func showHome(name: String)
     func showError()
-    func showName(name: String)
+    func printNameOnConsole(name: String)
     func showValidationAlert()
 }

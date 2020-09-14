@@ -45,7 +45,7 @@ class LoginPresenter: ViewToPresenterProtocol {
 
 extension LoginPresenter: InteractorToPresenterProtocol {
     func nameValidationSuccess(name: String) {
-        view?.showName(name: name)
+        view?.printNameOnConsole(name: name)
     }
 
     func loginFetchedSuccess(with name: String) {

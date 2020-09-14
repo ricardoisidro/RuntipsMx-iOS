@@ -10,8 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Runtips_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="birthDateTextField" destination="aym-uZ-42V" id="SeU-gY-FOC"/>
+                <outlet property="confirmPasswordTextField" destination="KDk-EG-Mgp" id="nPl-q9-O6r"/>
+                <outlet property="mailTextField" destination="Jit-58-9i5" id="K7P-GW-mpI"/>
                 <outlet property="nameTextField" destination="fcT-zJ-ZOR" id="Dcr-wW-zx6"/>
+                <outlet property="passwordTextField" destination="f3F-1n-Uwq" id="9hi-Ff-59R"/>
+                <outlet property="phoneTextField" destination="smM-pB-EUX" id="pFd-j7-rqj"/>
+                <outlet property="sexTextField" destination="Smq-GM-KKo" id="kZj-yF-vzt"/>
+                <outlet property="stateTextField" destination="qqq-th-D6S" id="MlZ-K2-YKE"/>
                 <outlet property="surnameTextField" destination="bf4-jc-6MG" id="y5s-Jt-NIR"/>
+                <outlet property="termsSwitch" destination="M9b-nS-Rco" id="VZk-xy-vm6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
